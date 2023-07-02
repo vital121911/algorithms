@@ -1,8 +1,8 @@
 import searcher.Searcher;
 import searcher.impl.BinarySearcher;
 import sorter.Sorter;
-import sorter.impl.BubbleSorter;
 import sorter.impl.InsertionSorter;
+import sorter.impl.SelectionSorter;
 
 import java.util.Arrays;
 

@@ -2,18 +2,23 @@ package sorter.impl;
 
 import sorter.Sorter;
 
+import java.util.Arrays;
+
 public class InsertionSorter implements Sorter {
 
     @Override
     public void sort(int[] inputArray) {
-        for (int i = 0; i < inputArray.length - 1; i++) {
-            for (int j = i + 1; j < inputArray.length; j++) {
-                if (inputArray[j] < inputArray[i]) {
-                    int temp = inputArray[i];
-                    inputArray[i] = inputArray[j];
-                    inputArray[j] = temp;
-                }
+        System.out.println("START"+ Arrays.toString(inputArray));
+        for (int i = 0; i < inputArray.length; i++) {
+            int temp=inputArray[i];
+            System.out.println("I"+i);
+            int pt;
+            for (pt = i; ((pt>0)&&(inputArray[pt-1]>temp)); pt--) {
+                System.out.println("pt"+pt);
+                inputArray[pt]=inputArray[pt-1];
+                System.out.println(Arrays.toString(inputArray));
             }
+            inputArray[pt]=temp;
         }
     }
 }
