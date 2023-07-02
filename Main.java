@@ -1,7 +1,8 @@
 import searcher.Searcher;
 import searcher.impl.BinarySearcher;
-import sorter.BubbleSorter;
 import sorter.Sorter;
+import sorter.impl.BubbleSorter;
+import sorter.impl.InsertionSorter;
 
 import java.util.Arrays;
 
@@ -11,7 +12,7 @@ public class Main {
 
         int[] array={90,2,3,23,4,89,5,90,6,7,8,90};
         int item=7;
-        Sorter sorter= new BubbleSorter();
+        Sorter sorter= new InsertionSorter();
         sorter.sort(array);
         System.out.println(Arrays.toString(array));
         Searcher searcher=new BinarySearcher();

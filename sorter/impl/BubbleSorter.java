@@ -1,4 +1,6 @@
-package sorter;
+package sorter.impl;
+
+import sorter.Sorter;
 
 public class BubbleSorter implements Sorter {
 
