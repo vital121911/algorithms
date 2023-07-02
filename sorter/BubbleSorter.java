@@ -1,17 +1,21 @@
 package sorter;
 
-public class BubbleSorter implements Sorter{
+public class BubbleSorter implements Sorter {
 
     @Override
     public void sort(int[] inputArray) {
-        for (int i = 0; i <inputArray.length; i++) {
-            for (int j = i+1; j <(inputArray.length) ; j++) {
-                if (inputArray[j]<inputArray[i]){
-                    int temp=inputArray[i];
-                    inputArray[i]=inputArray[j];
-                    inputArray[j]=temp;
+        boolean isNotSorted = true;
+        for (int i = 0; i < inputArray.length && isNotSorted; i++) {
+            isNotSorted = false;
+            for (int j = 0; (j < inputArray.length - 1 - i); j++) {
+                if (inputArray[j] > inputArray[j + 1]) {
+                    int temp = inputArray[j];
+                    inputArray[j] = inputArray[j + 1];
+                    inputArray[j + 1] = temp;
+                    isNotSorted = true;
                 }
             }
         }
     }
+
 }
