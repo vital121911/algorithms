@@ -8,7 +8,7 @@ public class BinarySearcher implements Searcher {
     public Integer index(int[] sortedItems, int element) {
         int start = 0;
         int end = sortedItems.length;
-        while (start < end) {
+        while (start <= end) {
             int midl = (int) ((long) start + end) / 2;
             int midlItem = sortedItems[midl];
             if (midlItem == element) {
