@@ -1,7 +1,7 @@
 package sorter;
 
-public interface Sorter {
+public interface Sorter<Input> {
 
-    void sort(int[] inputArray);
+    void sort(Input inputArray);
 
 }

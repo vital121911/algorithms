@@ -2,7 +2,7 @@ package sorter.impl;
 
 import sorter.Sorter;
 
-public class BubbleSorter implements Sorter {
+public class BubbleSorter implements Sorter<int[]> {
 
     @Override
     public void sort(int[] inputArray) {
