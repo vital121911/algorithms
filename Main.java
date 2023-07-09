@@ -1,7 +1,7 @@
 import searcher.Searcher;
 import searcher.impl.BinarySearcher;
 import sorter.Sorter;
-import sorter.impl.merging.MergingSorter;
+import sorter.impl.quick.DefaultQuickSort;
 
 import java.util.Arrays;
 
@@ -9,9 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] array = {90, 2, 3, 23, 4, 89, 5, 90, 6, 7, 8, 90};
+        int[] array = {90, 2, 3, 23, 4,  89, 5, 90, 6, 7, 8, 90 };
         int item = 7;
-        Sorter sorter = new MergingSorter();
+        Sorter sorter = new DefaultQuickSort();
         sorter.sort(array);
         System.out.println(Arrays.toString(array));
         Searcher searcher = new BinarySearcher();
